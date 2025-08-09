@@ -1,0 +1,11 @@
+/* for night */
+.night-bg {
+  background-image: url('https://i.pinimg.com/1200x/db/3c/86/db3c863329ffce8bbc8f1c9b3caf58cf.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
