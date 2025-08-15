@@ -75,7 +75,7 @@ function Whether() {
             <div class="night-bg">
              <div class="container text-center  p-5 rounded-2">
 
-                <input type='text' class='form-control opacity-50 rounded-3' value={city || ""} onChange={(e) => {
+                <input type='text' class='form-control opacity-50 rounded-3' placeholder=" Enter Your Location"value={city || ""} onChange={(e) => {
                     setcity(e.target.value)
                     if(e.target.value===""){
                         setcurrent();
