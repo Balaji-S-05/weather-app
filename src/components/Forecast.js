@@ -1,15 +1,15 @@
 import React from "react";
 
-const Forecast = ({ forecastwhether, location }) => {
+const Forecast = ({ forecastweather, location }) => {
     return (
 
         <div className="mt-2 opacity-75">
-            <h2>3 Day Forecast Whether of {location.name} {location.region}</h2>
+            <h2>3-Day Weather Forecast for {location.name}, {location.region}</h2>
 
-            {forecastwhether.forecastday.map((data, index) => {
+            {forecastweather.forecastday.map((data, index) => {
                 return (
 
-                    <div class=" bg-light accordion opacity-50 accordion-flush mt-3" id="accordionFlushExample" key={index}>
+                    <div class=" bg-light accordion opacity-75 accordion-flush mt-3" id="accordionFlushExample" key={index}>
 
                         <div className="accordion-item">
                             <h2 className="accordion-header  ">
@@ -28,8 +28,8 @@ const Forecast = ({ forecastwhether, location }) => {
                                             <>
                                                 <span style={{ color: 'red' }}>TIME</span> : {data.time} <span />
                                                 <span style={{ color: 'red' }}>TEMPARATURE</span> : {data.temp_c}
-                                                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar" style={{ width: `${data.temp_c}%` }}>{data.temp_c}</div>
+                                                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" style={{ width: `${data.temp_c}%` }}>{data.temp_c}</div>
                                                 </div>
                                             </>
                                         );

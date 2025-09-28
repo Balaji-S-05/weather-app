@@ -4,7 +4,7 @@ import axios from 'axios';
 import Current  from './components/Current';
 import Forecast from './components/Forecast';
 import './bg.css';
-function Whether() {
+function Weather() {
 
     const [city, setcity] = useState();
     //WEATHER URL
@@ -15,8 +15,8 @@ function Whether() {
     const getforecasturl=(data)=>`${forecasturl}${data}&days=7&aqi=no&alerts=no`;
 
     const [clickedcity,setclickedcity] = useState();
-    const [currentwhether,setcurrent]=useState();
-    const [forecastwhether,setforecast]=useState();
+    const [currentweather,setcurrent]=useState();
+    const [forecastweather,setforecast]=useState();
     const [location,setlocation]=useState();
     const [citysug, setcitysug] = useState([]);
 
@@ -99,11 +99,11 @@ function Whether() {
                     })}
 
                 {/* Importing Current And Forecast components */}
-                {currentwhether && <Current currentwhether={currentwhether}location={location}/> }
-                {forecastwhether && <Forecast forecastwhether={forecastwhether}location={location}/>}
+                {currentweather && <Current currentweather={currentweather}location={location}/> }
+                {forecastweather && <Forecast forecastweather={forecastweather}location={location}/>}
                 </div>
             </div>
     );
 
 }
-export default Whether;
+export default Weather;
